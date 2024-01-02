@@ -11,8 +11,7 @@ pipeline {
         git 'git@github.com:jjaswanth66/jenkins_pipeline.git'
         dir('apache-maven-3.8.8/devops/pom')
         sh 'mvn --version' 
-        sh 'mvn install'
-        sh 'mvn package'
+        sh 'mvn clean install -Dmaven.repo.local=/opt/jenkins'
         
       }
      
